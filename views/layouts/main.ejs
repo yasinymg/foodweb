@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title != 'undefined' ? title: 'Delicious' %></title>
+  <link rel="stylesheet" href="/css/bootstr.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  
+  <div class="container-xxl px-md-5 bg-white shadow-lg">
+
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        
+        <h3>DeliciousEats</h3>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="/about" class="nav-link px-2 link-secondary">About</a></li>
+        <li><a href="/submit-recipe" class="nav-link px-2 link-secondary">Submit</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <form method="POST" action="/search">
+          <input type="search" name="searchTerm" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <%- body -%>
+    </main>
+
+    <footer class="py-5">
+      <p>Made with Love By Ahmed Yasin</p>
+    </footer>
+
+  </div>
+
+  <script src="/js/jsde.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
